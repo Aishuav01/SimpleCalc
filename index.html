@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <link rel="stylesheet" type="text/CSS" href="style.css">
+        <link rel="stylesheet" type="text/CSS" href="bootstrap.css">
+        
+    </head>
+    <header>
+        Calculator
+    </header>
+    <body>
+        <div class="calc">
+            <div class="input">
+                <input type="text" id="inp"  >
+            </div>
+            <div class="row row0">
+               <button value=" " id="clr" onclick="clr()">CLEAR</button>
+               <button value="/" id="bun" onclick="inn('/')">/</button>
+            </div>
+            <div class="row row1">
+                <button value="7"id="bun" onclick="inn(7)">7</button>
+                <button value="8" id="bun"onclick="inn(8)">8</button>
+                <button value="9" id="bun"onclick="inn(9)">9</button>
+                <button value="+" id="bun" onclick="inn('+')">+</button>
+            </div>
+            <div class="row row1">
+                <button value="4"id="bun" onclick="inn(4)">4</button>
+                <button value="5" id="bun"onclick="inn(5)">5</button>
+                <button value="6" id="bun" onclick="inn(6)">6</button>
+                <button value="-" id="bun" onclick="inn('-')">-</button>
+            </div>
+            <div class="row row1">
+                <button value="1" id="bun"  onclick="inn(1)">1</button>
+                <button value="2"  id="bun" onclick="inn(2)">2</button>
+                <button value="3" id="bun" onclick="inn(3)">3</button>
+                <button value="*" id="bun" onclick="inn('*')">*</button>
+            </div>
+            <div class="row row1">
+                <button value="0" id="bun1" onclick="inn(0)">0</button>
+                <button value="." id="bun"onclick="inn('.')">.</button>
+                <button value="/" id="bun" id="res" onclick="res()">=</button>
+            </div>                
+            </div>
+            
+        </div>
+        </div>
+        <script>
+            function inn(a){
+                document.getElementById('inp').value += a;
+            }
+            function res(){
+                var result = eval(document.getElementById('inp').value);
+                document.getElementById('inp').value = result;
+            }
+            function clr(){
+                document.getElementById('inp').value = 0;
+            }    
+        </script>
+    </body>
+</html>
